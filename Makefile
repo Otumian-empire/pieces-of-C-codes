@@ -13,5 +13,12 @@ build: $(file)
 run: $(bin)
 	@./$(bin)
     
-clean:
+clean: $(bin)
 	@rm $(bin)
+	
+git-am: $(files)
+	@git add $(files)
+	@git commit -m "$(files)"
+    
+git-push: $(files)
+	@git push -u origin master
