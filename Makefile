@@ -6,6 +6,7 @@ bin = app
 
 all: build run
 
+# compile the first
 build: $(file)
 	@$(CC) $< -o $(bin) -Wall
 
@@ -18,11 +19,6 @@ clean: $(bin)
 git-am: $(files)
 	@git add $(files)
 	@git commit -m "$(files)"
-
-git-am-.:
-	@git add .
-	@read -p "enter commit message: " m;
-	@git commit -m "$(files) - " $$m
     
 git-push: $(files)
 	@git push -u origin master
