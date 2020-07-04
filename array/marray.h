@@ -2,28 +2,30 @@
 #define MARRAY_H
 
 // array operations
+// by design conversion, always pass the array size first
 
 // return the index of an element
-// if the element exist in the array,
+// if the element exists in the array,
 // else, -1
-int array_hasi(int *arr, int s, int a);
-int array_hasc(char *arr, int s, char a);
+int array_hasi(int s, int *arr , int a);
+int array_hasc(int s, char *arr, char a);
 
-// return the sum of elements in an array
-int array_sum(int *arr, int s);
+// return the sum of the elements in the array
+int array_sum(int s, int *arr);
 
 // give two arrays, return an array of the sum
 // of corresponding elements
-// given the current limitations, let the size of the array
-// be 5
-int *array_sumr(int *arra, int *arrb);
+// the first array is modified
+int *array_sumr(int s, int *arra, int *arrb);
 
 // return array by multiplying the content of the given
 // array by the factor
-int *array_mul(int *arr, int factor);
+// the first array is modified
+int *array_mul(int s, int *arr, int factor);
 
 // give two arrays, return an array of the product of
 // of corresponding elements
-int *array_mula(int * arra, int * arrb);
+// the first array is modified
+int *array_mula(int s, int * arra, int * arrb);
 
 #endif

@@ -1,12 +1,12 @@
 #include "marray.h"
 
-int array_hasi(int *arr, int s, int a)
+int array_hasi(int s, int arr[], int a)
 {
     int index = -1;
 
     for (int i = 0; i < s; i++)
     {
-        if (*(arr + i) == a)
+        if (arr[i] == a)
         {
             index = i;
             break;
@@ -16,13 +16,13 @@ int array_hasi(int *arr, int s, int a)
     return index;
 }
 
-int array_hasc(char *arr, int s, char a)
+int array_hasc(int s, char *arr, char a)
 {
     int index = -1;
 
     for (int i = 0; i < s; i++)
     {
-        if (*(arr + i) == a)
+        if (arr[i] == a)
         {
             index = i;
             break;
@@ -32,7 +32,7 @@ int array_hasc(char *arr, int s, char a)
     return index;
 }
 
-int array_sum(int *arr, int s)
+int array_sum(int s, int *arr)
 {
     int total = 0;
 
@@ -44,38 +44,33 @@ int array_sum(int *arr, int s)
     return total;
 }
 
-int *array_sumr(int *arra, int *arrb)
-{
-    static int arr[5];
-
-    for (int i = 0; i < 5; i++)
+int *array_sumr(int s, int *arra, int *arrb)
+{   
+    for (int i = 0; i < s; i++)
     {
-        arr[i] = arra[i] + arrb[i];
+        arra[i] = arra[i] + arrb[i];
+    }
+
+    return arra;
+}
+
+int *array_mul(int s, int *arr, int factor)
+{
+    for (int i = 0; i < s; i++)
+    {
+        arr[i] = arr[i] * factor;
     }
 
     return arr;
 }
 
-int *array_mul(int *arr, int factor)
+int *array_mula(int s, int *arra, int *arrb)
 {
-    static int rarr[5];
-
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < s; i++)
     {
-        rarr[i] = arr[i] * factor;
+        arra[i] = arra[i] * arrb[i];
     }
-
-    return rarr;
+    
+    return arra;
 }
 
-int *array_mula(int *arra, int *arrb)
-{
-    static int rarr[5];
-
-    for (int i = 0; i < 5; i++)
-    {
-        rarr[i] = arra[i] * arrb[i];
-    }
-
-    return rarr;
-}

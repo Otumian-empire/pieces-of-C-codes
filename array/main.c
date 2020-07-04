@@ -1,61 +1,73 @@
 #include <stdio.h>
 #include "marray.h"
+#define PNL printf("\n")
 
 // print the contecnt of an array
-void print_a(int *arr, int s);
+void print_a(int s, int *arr);
 
 int main()
 {
 	int s = 5;
 
-	int arri[] = {1, 2, 3, 4, 5};
-	char arrc[] = {'1', '2', '3', '4', '5'};
-
-	int i = array_hasi(arri, s, 1);
-	int j = array_hasc(arrc, s, '1');
+	int  odd[] = {1, 3, 5, 7, 9};
+	int  even[] = {2, 4, 6, 8, 10};
+	char vowels[] = {'a', 'e', 'i', 'o', 'u'};
+	
+	puts("These are the arrays that would be used ...");
+	
+	printf("even: ");
+	print_a(s, even); PNL;
+		
+	printf("odd: ");
+	print_a(s, odd); PNL;
+	
+	
+	int i = array_hasi(s, even, 1);
+	int j = array_hasc(s, vowels, 'u');
 
 	// array_hasi
 	if (i > -1)
 	{
-		printf("%d in array\n", arri[i]);
+		printf("%d in array", even[i]); 
 	}
 	else
 	{
-		printf("element not found\n");
-	}
+		printf("element not found");
+	} PNL;
 
-	// array_hasi
+	// array_hasc
 	if (j > -1)
 	{
-		printf("%c in array\n", arrc[j]);
+		printf("%c in array", vowels[j]);
 	}
 	else
 	{
-		printf("element not found\n");
-	}
+		printf("element not found");
+	} PNL;
 
 	// array_sum
 	printf("sum of the array, ");
-	print_a(arri, s);
-	printf(" is %d\n", array_sum(arri, s));
+	print_a(s, even);
+	printf(" is %d", array_sum(s, even)); PNL;
 
 	// array_sumr
-	int *p = array_sumr(arri, arri);
-	print_a(p, s);
-	printf("\n");
+	print_a(s, array_sumr(s, even, odd)); PNL;
 
 	// array_mul
-	print_a(array_mul(arri, s), s);
-	printf("\n");
+	print_a(s, array_mul(s, odd, s)); PNL;
 
 	// array_mula
-	print_a(array_mula(arri, arri), s);
-	printf("\n");
+	print_a(s, array_mula(s, even, odd)); PNL;
 
+    puts("arrays used initially, modification");
+    
+	print_a(s,even); PNL;
+	print_a(s,odd); PNL;
+	
 	return 0;
 }
 
-void print_a(int *arr, int s)
+void print_a(int s, int *arr)
 {
 	printf("[");
 
@@ -71,3 +83,4 @@ void print_a(int *arr, int s)
 
 	printf("]");
 }
+
