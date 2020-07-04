@@ -1,13 +1,14 @@
 CC = gcc
-file = helloworld.c
+files = mstring.c mstring.h main.c
 bin = app
 
-.PHONY = build run
+.PHONY = build run clean
 
 all: build run
 
-build: $(file)
-	@$(CC) $< -o $(bin) -Wall
+build: $(files)
+	@clear
+	@$(CC) $(files) -o $(bin) -Wall
 
 run: $(bin)
 	@./$(bin)
@@ -18,11 +19,6 @@ clean: $(bin)
 git-am: $(files)
 	@git add $(files)
 	@git commit -m "$(files)"
-
-git-am-.:
-	@git add .
-	@read -p "enter commit message: " m;
-	@git commit -m "$(files) - " $$m
     
 git-push: $(files)
 	@git push -u origin master

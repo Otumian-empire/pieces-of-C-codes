@@ -1,5 +1,6 @@
 # C programming
-C programming using [tutorialspoint][tutorialspoint] as reference
+* Learnt a little about makefiles
+* Referenced [tutorialspoint][tutorialspoint] C programming tutorial
 
 ## requirement
 * git - a very simple way to download the source code

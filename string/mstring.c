@@ -39,3 +39,4 @@ int index_of(char *str, char a)
 
     return i;
 }
+

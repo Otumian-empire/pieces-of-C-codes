@@ -11,3 +11,4 @@ char char_at(char *str, int a);
 int index_of(char *str, char a);
 
 #endif
+
