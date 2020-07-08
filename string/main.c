@@ -16,8 +16,6 @@ int main()
 
 	printf("Index of %c is %d\n", char_at(name, 2), index_of(name, char_at(name, 2)));
 	
-	printf("%s\n", append(name, 'a'));
-
 	return 0;
 }
 
