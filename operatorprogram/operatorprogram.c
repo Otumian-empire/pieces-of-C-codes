@@ -5,7 +5,7 @@ int eq(int a, int b) {
 }
 
 int gt(int a, int b) {
-    return a < b;
+    return a > b;
 }
 
 int lt(int a, int b) {
@@ -36,5 +36,3 @@ int nlt(int a, int b) {
 int ngt(int a, int b) {
     return lt(a,b) || eq(a, b);
 }
-
-
