@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include "marray.h"
-#define PNL printf("\n")
-
-// print the contecnt of an array
-void print_a(int s, int *arr);
+#include "helper/helper.h"
 
 int main()
 {
@@ -20,7 +17,6 @@ int main()
 		
 	printf("odd: ");
 	print_a(s, odd); PNL;
-	
 	
 	int i = array_hasi(s, even, 1);
 	int j = array_hasc(s, vowels, 'u');
@@ -66,21 +62,3 @@ int main()
 	
 	return 0;
 }
-
-void print_a(int s, int *arr)
-{
-	printf("[");
-
-	for (int i = 0; i < s; i++)
-	{
-		printf("%d", arr[i]);
-
-		if (i < (s - 1))
-		{
-			printf(", ");
-		}
-	}
-
-	printf("]");
-}
-

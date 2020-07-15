@@ -73,4 +73,3 @@ int *array_mula(int s, int *arra, int *arrb)
     
     return arra;
 }
-
