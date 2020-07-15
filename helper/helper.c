@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "helper.h"
 
 void print_a(int s, int *arr)
@@ -16,4 +17,3 @@ void print_a(int s, int *arr)
 
 	printf("]");
 }
-

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "marray.h"
-#include "helper/helper.h"
+#include "../helper/helper.h"
 
 int main()
 {
