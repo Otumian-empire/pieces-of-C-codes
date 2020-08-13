@@ -1,0 +1,14 @@
+
+assertEqual(a, b)
+assertNotEqual(a, b)
+assertTrue(x)
+assertFalse(x)
+assertIs(a, b)
+assertNotIs(a, b)
+assertIsNone(x)
+assertIsNotNone(x)
+assertIn(a, b)
+assertNotIn(a, b)
+isinstance(a, b)
+isNotinstance(a, b)
+
